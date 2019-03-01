@@ -14,7 +14,7 @@ The frontend is built using [mithril.js](https://mithril.js.org)
 
 response is:
 
-```json
+```javascript
 {
   "url": string,
   "name": string
