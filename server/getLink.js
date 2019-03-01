@@ -3,7 +3,7 @@ const cheerio = require('cheerio')
 
 const getBukkitHtml = () => axios('http://bukk.it')
 
-const getLink = async () => {
+const getLink = async res => {
   const { data: html } = await getBukkitHtml()
   const $ = cheerio.load(html)
 
@@ -14,7 +14,7 @@ const getLink = async () => {
 
   const url = `http://bukk.it/${name}`
 
-  return { url, name }
+  res.end(JSON.stringify({ url, name }))
 }
 
 module.exports = getLink

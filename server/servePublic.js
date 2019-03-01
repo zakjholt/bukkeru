@@ -4,7 +4,9 @@ const path = require('path')
 
 const servePublic = (assetName, res) => {
   try {
-    const file = fs.readFileSync(path.resolve(__dirname, 'public', assetName))
+    const file = fs.readFileSync(
+      path.resolve(__dirname, '..', 'public', assetName)
+    )
 
     res.end(file)
   } catch (err) {
