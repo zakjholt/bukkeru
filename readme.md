@@ -1,4 +1,5 @@
 ## bukkeru
+> Like unsplash, but not artsy
 
 This is an app that grabs and displays random gifs and images from [bukk.it](http://bukk.it)
 
