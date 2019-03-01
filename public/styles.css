@@ -1,0 +1,75 @@
+body {
+  background: #232323;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20vw;
+  font-family: Arial;
+}
+
+.image {
+  max-height: calc(100vh - 10px);
+}
+
+a {
+  color: white;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 5px;
+}
+
+.controls {
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  padding: 10px;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+  background: white;
+  color: maroon;
+  box-shadow: 0 0 0 1px rgb(100, 100, 100);
+  transition: all 0.2s ease-in-out;
+  font-weight: 600;
+}
+
+.controls:hover {
+  background: maroon;
+  color: white;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(180deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loader {
+  border: 1px solid rgba(180, 180, 200, 0.8);
+  border-left-color: maroon;
+  border-radius: 100%;
+  width: 80px;
+  height: 80px;
+  transition: transform 1s ease-in-out;
+  animation: spin 1s infinite;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding: 0;
+  }
+}
